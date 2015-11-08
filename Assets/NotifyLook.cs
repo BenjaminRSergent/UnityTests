@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class NotifyLook : MonoBehaviour {
+	public float edge = 0.1f;
 	public Camera myCamera;
 
 	// Use this for initialization
@@ -26,7 +27,7 @@ public class NotifyLook : MonoBehaviour {
 	bool IsInView (Vector3 position) {
 		Vector2 screenCoord = myCamera.WorldToViewportPoint(position);
 
-		return screenCoord.x >= 0 && screenCoord.x <= 1 &&
-			   screenCoord.y >= 0 && screenCoord.y <= 1;
+		return screenCoord.x >= edge && screenCoord.x <= 1 - edge &&
+			screenCoord.y >= edge && screenCoord.y <= 1 - edge;
 	}
 }
