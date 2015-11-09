@@ -3,15 +3,12 @@ using System.Collections;
 
 [RequireComponent(typeof(CharacterController))]
 [AddComponentMenu("Control Script/FPS Input")]
-public class FPSMovement : MonoBehaviour
+public class FlyMovement : MonoBehaviour
 {
 	public float gravity = -9.8f;
-	public float movementSpeed = 1.0f;
-	public float jumpForce = 100.0f;
-	public float jumpDuration = 1.0f;
-	private float jumpTime = 0.0f;
+	public float movementSpeed = 400.0f;
 	private CharacterController charController;
-
+	
 	// Use this for initialization
 	void Start()
 	{
@@ -22,27 +19,21 @@ public class FPSMovement : MonoBehaviour
 	void Update()
 	{
 		float deltaX = Input.GetAxis("Horizontal") * movementSpeed;
+		float deltaY = 0;
 		float deltaZ = Input.GetAxis("Vertical") * movementSpeed;
-
-		Vector3 movement = new Vector3(deltaX * Time.deltaTime, 0, deltaZ * Time.deltaTime);
-		movement = Vector3.ClampMagnitude(movement, movementSpeed);
-		movement.y = gravity;
-
 		
-		if (Input.GetKeyDown(KeyCode.Space) && charController.isGrounded) {
-			jumpTime = jumpDuration;
-			Debug.Log("Jumping");
+		if (Input.GetKey(KeyCode.Space)) {
+			deltaY += movementSpeed;
+		}
+		if (Input.GetKey(KeyCode.LeftControl)) {
+			deltaY -= movementSpeed;
 		}
 		
-		if (jumpTime > 0.0f) {
-			jumpTime -= Time.deltaTime;
-			movement.y += jumpForce * jumpTime / jumpDuration;
-			Debug.Log("Applying Force");
-		}
+		Vector3 movement = new Vector3(deltaX * Time.deltaTime, deltaY * Time.deltaTime, deltaZ * Time.deltaTime);
 
 		movement *= Time.deltaTime;
 		movement = transform.TransformDirection(movement);
 		charController.Move(movement);
-
+		
 	}
 }

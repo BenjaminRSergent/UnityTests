@@ -10,12 +10,12 @@ public class Seeker : MonoBehaviour, ILookTrigger {
 	public AudioClip found;
 	public AudioClip lost;
 
-	AudioSource audio;
+	AudioSource audioSource;
 	private bool isLookedAt = false;
 	private bool wasLookedAt = false;
 	// Use this for initialization
 	void Start() {
-		audio = GetComponent<AudioSource>();
+		audioSource = GetComponent<AudioSource>();
 		RandomTurn();
 	}
 	
@@ -23,16 +23,16 @@ public class Seeker : MonoBehaviour, ILookTrigger {
 	void Update() {
 		if(isLookedAt) {
 			if(!wasLookedAt) {
-				audio.Stop();
-				audio.PlayOneShot(found);
+				audioSource.Stop();
+				audioSource.PlayOneShot(found);
 			}
 			moveTowardPlayer();
 		} else {
 
 			if(wasLookedAt) {
 				RandomTurn();
-				audio.Stop();
-				audio.PlayOneShot(lost);
+				audioSource.Stop();
+				audioSource.PlayOneShot(lost);
 			}
 
 			transform.Translate(0, 0, wanderSpeed * Time.deltaTime);

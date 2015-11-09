@@ -1,12 +1,18 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/SpawnSeeker.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Flocking/Agent.cs">
     <Files>
-      <File FileName="Assets/Seeker.cs" Line="35" Column="28" />
-      <File FileName="Assets/Scripts/Movement/MouseLook.cs" Line="1" Column="1" />
-      <File FileName="Assets/NotifyLook.cs" Line="1" Column="1" />
-      <File FileName="Assets/SpawnSeeker.cs" Line="10" Column="37" />
-      <File FileName="Assets/Scripts/Enemy/WanderBehavior.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Flocking/IFlockingBehavior.cs" Line="12" Column="2" />
+      <File FileName="Assets/Scripts/Player/PlayerCharacter.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Enemy/Spawner.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Enemy/ReactiveTarget.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Enemy/ILookTrigger.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Enemy/FireballAttack.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Combat/CameraShooter.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Flocking/Agent.cs" Line="44" Column="45" />
+      <File FileName="Assets/Scripts/Player/Target.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Control/BoidController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Flocking/SeekBehavior.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

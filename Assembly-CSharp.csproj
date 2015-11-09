@@ -45,18 +45,24 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\NotifyLook.cs" />
      <Compile Include="Assets\Scripts\Combat\CameraShooter.cs" />
+     <Compile Include="Assets\Scripts\Control\BoidController.cs" />
+     <Compile Include="Assets\Scripts\Control\SpawnSeeker.cs" />
      <Compile Include="Assets\Scripts\Enemy\FireballAttack.cs" />
+     <Compile Include="Assets\Scripts\Enemy\ILookTrigger.cs" />
      <Compile Include="Assets\Scripts\Enemy\ReactiveTarget.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Seeker.cs" />
      <Compile Include="Assets\Scripts\Enemy\Spawner.cs" />
      <Compile Include="Assets\Scripts\Enemy\WanderBehavior.cs" />
-     <Compile Include="Assets\Scripts\ILookTrigger.cs" />
+     <Compile Include="Assets\Scripts\Flocking\Agent.cs" />
+     <Compile Include="Assets\Scripts\Flocking\IFlockingBehavior.cs" />
+     <Compile Include="Assets\Scripts\Flocking\SeekBehavior.cs" />
      <Compile Include="Assets\Scripts\Movement\FPSMovement.cs" />
+     <Compile Include="Assets\Scripts\Movement\FlyMovement.cs" />
      <Compile Include="Assets\Scripts\Movement\MouseLook.cs" />
+     <Compile Include="Assets\Scripts\Player\NotifyLook.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerCharacter.cs" />
-     <Compile Include="Assets\Seeker.cs" />
-     <Compile Include="Assets\SpawnSeeker.cs" />
+     <Compile Include="Assets\Scripts\Player\Target.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
